@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SocketChat</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+
+    <body>
+        <div id="sidebar">
+            <div id="sidebarContainer">
+                <h2>Chat Rooms</h2>
+            </div>
+        </div>
+
+
+        <div id="messageWindow">
+            <div id="chatSelected" class="hidden">
+                <div id="messages">
+                    <ul id="messageContainer"></ul>
+                </div>
+                <div id="form">
+                    <form action="" id="formContainer">
+                        <input type="text" id="input" autocomplete="off" />
+                        <button id="sendButton">
+                            <span class="material-icons">send</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div id="chatNotSelected">
+                <h3>No chat selected</h3>
+            </div>
+        </div>
+
+        <script src="script.js" type="module"></script>
+    </body>
+</html>
