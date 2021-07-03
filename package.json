@@ -9,6 +9,6 @@
         "socket.io": "^4.1.2"
     },
     "scripts": {
-        "run": "node index.js"
+        "start": "node index.js"
     }
 }
