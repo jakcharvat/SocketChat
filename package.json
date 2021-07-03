@@ -4,6 +4,8 @@
     "description": "A simple socket.io chat app",
     "dependencies": {
         "express": "^4.17.1",
+        "npm": "^7.19.1",
+        "randomatic": "^3.1.1",
         "socket.io": "^4.1.2"
     }
 }

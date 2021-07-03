@@ -10,14 +10,54 @@
         <div id="sidebar">
             <div id="sidebarContainer">
                 <h2>Chat Rooms</h2>
+                <div id="chatsContainer">
+                    <template id="roomTemplate">
+                        <div class="room">
+                            <h3 class="name">MyRoom</h3>
+                            <p class="code"><span class="bold">Code: </span><span class="code-span">FJW4</span></p>
+                        </div>
+                    </template>
+                </div>
+                <div id="chatsBottomRow" class="row">
+                    <button id="newChatButton">Create</button>
+                    <button id="joinChatButton">Join</button>
+                </div>
             </div>
         </div>
 
 
         <div id="messageWindow">
             <div id="chatSelected" class="hidden">
+                <div id="messageHeader">
+                    <h2 id="channelName" class="selectable"></h2>
+                    <button id="channelCode">
+                        <span></span>
+                        <div class="tooltip">Copied!</div>
+                    </button>
+                </div>
                 <div id="messages">
-                    <ul id="messageContainer"></ul>
+                    <ul id="messageContainer">
+                        <template id="userJoinedTemplate">
+                            <div class="message user-status-message">
+                                <span class="username"></span>
+                                <p class="message-text">joined the room</p>
+                            </div>
+                        </template>
+
+                        <template id="userLeftTemplate">
+                            <div class="message user-status-message">
+                                <span class="username"></span>
+                                <p class="message-text">left the room</p>
+                            </div>
+                        </template>
+
+                        <template id="chatMessageTemplate">
+                            <div class="message chat-message">
+                                <span class="username"></span>
+                                <p class="message-text selectable"></p>
+                            </div>
+                        </template>
+                    </ul>
                 </div>
                 <div id="form">
                     <form action="" id="formContainer">
@@ -32,6 +72,58 @@
                 <h3>No chat selected</h3>
             </div>
         </div>
+
+
+        <div id="newRoomPopup" class="popup-wrapper hidden">
+            <div class="overlay">
+                <form class="popup">
+                    <div class="popup-content">
+                        <h1>New Room</h1>
+                    <label for="roomNameTf">Room Name: </label>
+                    <input type="text" id="roomNameTf" name="roomNameTf" placeholder="MyRoom" required/>
+                    </div>
+                    <div class="row">
+                        <button id="cancelNewRoom" class="destructive cancel-button" type="reset">Cancel</button>
+                        <button id="createNewRoom" type="submit">Create</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+        <div id="joinRoomPopup" class="popup-wrapper hidden">
+            <div class="overlay">
+                <form class="popup">
+                    <div class="popup-content">
+                        <h1>Join Room</h1>
+                    <label for="roomCodeTf">Room Code: </label>
+                    <input type="text" id="roomCodeTf" name="roomCodeTf" placeholder="EX01" required />
+                    </div>
+                    <div class="row">
+                        <button id="cancelJoinRoom" class="destructive cancel-button" type="reset">Cancel</button>
+                        <button id="joinRoom" type="submit">Join</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+
+        <div id="namePopup" class="popup-wrapper">
+            <div class="overlay">
+                <form class="popup" action="">
+                    <div class="popup-content">
+                        <h1>Welcome!</h1>
+                    <label for="userNameTf">Your name: </label>
+                    <input type="text" id="userNameTf" name="userNameTf" placeholder="Jane Appleseed" autocomplete="off" autofocus required/>
+                    </div>
+                    <div class="row">
+                        <button type="submit" id="enterButton">Enter</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
 
         <script src="script.js" type="module"></script>
     </body>
